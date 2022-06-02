@@ -1,0 +1,22 @@
+#!/bin/sh
+HISTFILE="$XDG_DATA_HOME"/zsh/history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+export PATH="$HOME/.local/bin":$PATH
+export MANPAGER='nvim -R'
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
+export EDITOR="/usr/local/bin/nvim"
+export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64/"
+export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="$HOME/.java-lsp:$PATH"
+export PATH="$HOME/.gradle-7.2/gradle-7.2/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+
+export PATH="$HOME/.config/i3:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+export PYTHONPATH="/usr/local/lib/python3.8/dist-packages:$PYTHONPATH"
