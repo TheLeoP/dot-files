@@ -4,6 +4,8 @@ open(){
   xdg-open "$1" & disown > /dev/null 2>&1
 }
 
+# alias chrome-debug='/usr/bin/google-chrome-stable --remote-debugging-port=9222'
+
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
