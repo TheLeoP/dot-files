@@ -53,3 +53,6 @@ case "$(uname -s)" in
      # echo 'Other OS' 
      ;;
 esac
+
+alias cd='z'
+alias cdi='zi'

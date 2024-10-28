@@ -44,7 +44,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Delete exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -183,6 +183,11 @@ bar {
 bindsym XF86MonBrightnessUp exec "~/.config/i3/brightness -inc 1"
 bindsym XF86MonBrightnessDown exec "~/.config/i3/brightness -dec 1"
 
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # configuración para hacer capturas de pantallas
 bindsym Print exec "gnome-screenshot --file=/tmp/test && cat /tmp/test | xclip -in -selection clipboard -target image/png && rm /tmp/test"
 bindsym $mod+Print exec "gnome-screenshot --area --file=/tmp/test && cat /tmp/test | xclip -in -selection clipboard -target image/png && rm /tmp/test"
@@ -190,7 +195,27 @@ bindsym $mod+Print exec "gnome-screenshot --area --file=/tmp/test && cat /tmp/te
 for_window [class=".*"] move absolute position center
 floating_maximum_size 1300x700
 
-# exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
+exec --no-startup-id setxkbmap -layout latam
+exec --no-startup-id xinput set-prop "SYNA30FA:00 06CB:CEAB Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "SYNA30FA:00 06CB:CEAB Touchpad" "libinput Natural Scrolling Enabled" 1
+
+exec "~/.fehbg"
 
 bindsym $mod+Control+h move workspace to output right
 bindsym $mod+Control+l move workspace to output left
+
+mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+
+  bindsym l exec i3-msg exit
+
+  bindsym r exec systemctl reboot
+
+  bindsym s exec systemctl poweroff
+
+  bindsym Escape mode "default"
+
+  bindsym Return mode "default"
+
+}
+
+bindsym $mod+shift+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
