@@ -192,7 +192,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Print exec "gnome-screenshot --file=/tmp/test && cat /tmp/test | xclip -in -selection clipboard -target image/png && rm /tmp/test"
 bindsym $mod+Print exec "gnome-screenshot --area --file=/tmp/test && cat /tmp/test | xclip -in -selection clipboard -target image/png && rm /tmp/test"
 
-for_window [class=".*"] move absolute position center
+for_window [all] move absolute position center
+for_window [window_type=dialog window_type=splash window_type=tooltip window_type=notification] floating enable
 floating_maximum_size 1300x700
 
 exec --no-startup-id setxkbmap -layout latam
