@@ -225,3 +225,4 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 bindsym $mod+shift+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 hide_edge_borders both
+for_window [all] title_window_icon yes
