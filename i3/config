@@ -221,3 +221,5 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 }
 
 bindsym $mod+shift+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+
+hide_edge_borders both
