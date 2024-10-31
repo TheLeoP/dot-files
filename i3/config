@@ -195,6 +195,7 @@ bindsym $mod+Print exec "gnome-screenshot --area --file=/tmp/test && cat /tmp/te
 for_window [all] move absolute position center
 for_window [window_type=dialog window_type=splash window_type=tooltip window_type=notification] floating enable
 floating_maximum_size 1300x700
+no_focus [class=floating]
 
 exec --no-startup-id setxkbmap -layout latam
 exec --no-startup-id xinput set-prop "SYNA30FA:00 06CB:CEAB Touchpad" "libinput Tapping Enabled" 1
