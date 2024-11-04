@@ -229,5 +229,6 @@ for_window [all] title_window_icon yes
 for_window [all] title_window_icon padding 2
 
 gaps inner 2
-for_window [all] border none
+for_window [tiling] border none
+for_window [floating] border default
 smart_gaps inverse_outer
