@@ -179,9 +179,11 @@ bar {
         status_command i3status
 }
 
-# configuración para aumentar y disminuir brillo
-bindsym XF86MonBrightnessUp exec "~/.config/i3/brightness -inc 1"
-bindsym XF86MonBrightnessDown exec "~/.config/i3/brightness -dec 1"
+# The user may need to be added to the video group with the following command
+# usermod -aG video ${USER}
+# Then, logout and login to make the changes take effect
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
