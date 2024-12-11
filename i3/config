@@ -189,8 +189,8 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym Print exec "flameshot screen --clipboard"
-bindsym $mod+Print exec "flameshot gui --accept-on-select --clipboard"
+bindsym Print exec --no-startup-id "flameshot screen --clipboard"
+bindsym $mod+Print exec --no-startup-id "flameshot gui --accept-on-select --clipboard"
 
 for_window [all] move absolute position center
 for_window [window_type=dialog window_type=splash window_type=tooltip window_type=notification] floating enable
