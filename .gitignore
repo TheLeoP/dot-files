@@ -13,7 +13,6 @@ dlv/
 enchant/
 eog/
 evolution/
-flameshot/
 gedit/
 gh/
 github-copilot/
@@ -43,3 +42,9 @@ wezterm/
 zoom.conf
 zoomus.conf
 tiling-assistant/
+btop/
+chromium/
+i3-xdg-terminals.list
+microsoft-edge/
+teamviewer/
+xdg-terminals.list
