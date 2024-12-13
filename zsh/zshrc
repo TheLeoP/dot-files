@@ -76,7 +76,7 @@ else
     start_agent;
 fi
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 source <(fzf --zsh)
 
