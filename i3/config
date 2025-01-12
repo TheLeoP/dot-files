@@ -198,8 +198,6 @@ floating_maximum_size 1300 x 700
 no_focus [class=floating]
 
 exec --no-startup-id setxkbmap -layout latam
-exec --no-startup-id xinput set-prop "SYNA30FA:00 06CB:CEAB Touchpad" "libinput Tapping Enabled" 1
-exec --no-startup-id xinput set-prop "SYNA30FA:00 06CB:CEAB Touchpad" "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off off
 
