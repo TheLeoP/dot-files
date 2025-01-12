@@ -4,18 +4,11 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 export PATH="$HOME/.local/share/nvim/lazy/fzf/bin:$HOME/.local/bin":$PATH
-export MANPAGER='nvim -R'
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
 export EDITOR="/usr/local/bin/nvim"
-export PATH="$HOME/.gradle-7.2/gradle-7.2/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
-export PATH="$HOME/.config/i3:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-
-export PATH="/snap/libreoffice/current/lib/libreoffice/program/:$PATH"
-
-export PYTHONPATH="/usr/local/lib/python3.8/dist-packages:$PYTHONPATH"
