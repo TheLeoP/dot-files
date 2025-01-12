@@ -49,3 +49,5 @@ microsoft-edge/
 teamviewer/
 xdg-terminals.list
 zsh/plugins/
+.zcompdump
+.zcompdump*
