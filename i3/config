@@ -197,9 +197,6 @@ for_window [window_type=dialog window_type=splash window_type=tooltip window_typ
 floating_maximum_size 1300 x 700
 no_focus [class=floating]
 
-exec --no-startup-id xset -dpms
-exec --no-startup-id xset s off off
-
 exec "~/.fehbg"
 
 bindsym $mod+Control+h move workspace to output right
