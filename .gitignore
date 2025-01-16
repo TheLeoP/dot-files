@@ -48,6 +48,9 @@ i3-xdg-terminals.list
 microsoft-edge/
 teamviewer/
 xdg-terminals.list
+GIMP/
+gtk-2.0/
+
 zsh/plugins/
 .zcompdump
 .zcompdump*
