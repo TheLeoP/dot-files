@@ -228,3 +228,6 @@ gaps inner 2
 for_window [tiling] border none
 for_window [floating] border default
 smart_gaps inverse_outer
+
+assign [class="Google-chrome"] workspace 2
+assign [class="steam"] workspace 3
