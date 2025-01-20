@@ -16,7 +16,7 @@ set $mod Mod4
 font pango:CaskaydiaCove Nerd Font Mono 14
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CaskaydiaCove Nerd Font Mono:pixelsize=20'
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
