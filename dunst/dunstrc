@@ -22,10 +22,10 @@
     ### Geometry ###
 
     # The width of the window, excluding the frame.
-    # dynamic width from 0 to 300
-    # width = (0, 300)
-    # constant width of 300
-    width = 300
+    # dynamic width from 0 to 500
+    # width = (0, 500)
+    # constant width of 500
+    width = 700
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
@@ -117,7 +117,7 @@
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
     # Click events on gaps do not currently propagate to applications below.
-    gap_size = 0
+    gap_size = 2
 
     # Define a color for the separator.
     # possible values are:
@@ -144,7 +144,7 @@
 
     ### Text ###
 
-    font = Monospace 8
+    font = Monospace 14
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -213,7 +213,7 @@
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = no
 
     ### Icons ###
 
