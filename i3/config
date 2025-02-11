@@ -234,3 +234,4 @@ smart_gaps inverse_outer
 
 assign [class="Google-chrome"] workspace 2
 assign [class="steam"] workspace 3
+assign [class="obs"] workspace 3
