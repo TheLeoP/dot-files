@@ -1,8 +1,11 @@
 #!/bin/sh
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+
 open(){
   xdg-open "$1" & disown > /dev/null 2>&1
 }
+
+alias tg=ast-grep
 
 # alias chrome-debug='/usr/bin/google-chrome-stable --remote-debugging-port=9222'
 
