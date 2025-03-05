@@ -233,6 +233,7 @@ for_window [floating] border normal
 smart_gaps inverse_outer
 
 assign [class="Google-chrome"] workspace 2
+assign [class="zen"] workspace 2
 assign [class="steam"] workspace 3
 assign [class="obs"] workspace 3
 assign [class="org.gnome.Nautilus"] workspace 4
