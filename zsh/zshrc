@@ -61,6 +61,7 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
 fi
 
 eval "$(zoxide init zsh --cmd cd)"
+alias ls='eza'
 
 source <(fzf --zsh)
 
