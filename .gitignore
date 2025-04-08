@@ -50,6 +50,8 @@ teamviewer/
 xdg-terminals.list
 GIMP/
 gtk-2.0/
+join-desktop/
+autostart/
 
 zsh/plugins/
 .zcompdump
