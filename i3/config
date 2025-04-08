@@ -237,4 +237,4 @@ assign [class="zen"] workspace 2
 assign [class="steam"] workspace 3
 assign [class="obs"] workspace 3
 assign [class="org.gnome.Nautilus"] workspace 4
-assign [class="join-desktop"] workspace 5
+assign [title="^Join$"] workspace 5
