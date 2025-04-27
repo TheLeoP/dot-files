@@ -212,7 +212,8 @@ for_window [all] title_window_icon padding 2
 
 gaps inner 2
 for_window [tiling] border pixel
-for_window [floating] border pixel
+# for some reason, hiding and showing Electron floating windows without border makex them move downwards each time
+for_window [floating] border normal
 smart_gaps inverse_outer
 
 assign [class="Google-chrome"] workspace 2
