@@ -11,12 +11,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CaskaydiaCove Nerd Font Mono:
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# TODO: do I really need to start this here? Doesn't systemd already take care of this?
-# NetworkManager
+# NOTE: these are not handled by systemd
+exec --no-startup-id ~/.local/bin/join-desktop
 exec --no-startup-id nm-applet
-
-# Notification daemon
-exec --no-startup-id dunst
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
