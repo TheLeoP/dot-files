@@ -56,3 +56,5 @@ autostart/
 zsh/plugins/
 .zcompdump
 .zcompdump*
+
+Cypress/
