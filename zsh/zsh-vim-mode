@@ -1,5 +1,7 @@
 # bindkey -e will be emacs mode
-bindkey -v
+if [ -z "$NVIM" ]; then
+    bindkey -v
+fi
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
