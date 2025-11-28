@@ -50,6 +50,11 @@ bindkey "^k" up-line-or-beginning-search # Up
 bindkey "^j" down-line-or-beginning-search # Down
 bindkey -r "^d"
 
+bindkey "^x^a" beginning-of-line
+bindkey "^x^e" end-of-line
+bindkey "^x^u" kill-whole-line
+bindkey "^x^f" forward-char
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
