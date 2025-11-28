@@ -60,3 +60,9 @@ zsh/plugins/
 Cypress/
 
 unity3d/
+
+
+.mozilla/
+composer/
+electron-builder.json
+wpp/
