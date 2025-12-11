@@ -39,6 +39,7 @@ zsh_add_file "zsh-prompt"
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(vi-forward-char)
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(forward-char)
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
