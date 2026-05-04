@@ -52,6 +52,7 @@ GIMP/
 gtk-2.0/
 join-desktop/
 autostart/
+calibre/
 
 zsh/plugins/
 .zcompdump
