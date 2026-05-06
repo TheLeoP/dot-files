@@ -5,8 +5,8 @@
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
-  "modules-center": ["sway/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "mpd",
     "idle_inhibitor",
@@ -26,7 +26,7 @@
     "tray",
   ],
   // Modules configuration
-  // "sway/workspaces": {
+  // "hyprland/workspaces": {
   //     "disable-scroll": true,
   //     "all-outputs": true,
   //     "warp-on-scroll": false,
@@ -51,18 +51,8 @@
       "unlocked": "",
     },
   },
-  "sway/window": {
+  "hyprland/window": {
     "max-length": 20,
-  },
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>",
-  },
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": ["", ""],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}",
   },
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -114,7 +104,7 @@
     "tooltip": false,
   },
   "memory": {
-    "format": "{used} / {avail} GB",
+    "format": "{used} / {total} GB",
   },
   "temperature": {
     // "thermal-zone": 2,
