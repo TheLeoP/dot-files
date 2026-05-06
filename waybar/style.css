@@ -296,7 +296,7 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
+  background: #eb4d4b;
 }
 
 #scratchpad {
