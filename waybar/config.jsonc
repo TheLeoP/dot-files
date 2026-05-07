@@ -20,7 +20,6 @@
     "disk",
     "temperature",
     "backlight",
-    "keyboard-state",
     "pulseaudio",
     "clock",
     "tray",
@@ -42,15 +41,6 @@
   //         "default": ""
   //     }
   // },
-  "keyboard-state": {
-    "numlock": false,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": " ",
-      "unlocked": " ",
-    },
-  },
   "hyprland/window": {
     "max-length": 20,
   },
