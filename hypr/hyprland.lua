@@ -134,11 +134,10 @@ hl.bind(main_mod .. " + h", hl.dsp.focus { direction = "left" })
 hl.bind(main_mod .. " + j", hl.dsp.focus { direction = "down" })
 hl.bind(main_mod .. " + k", hl.dsp.focus { direction = "up" })
 hl.bind(main_mod .. " + l", hl.dsp.focus { direction = "right" })
--- TODO: this doesn't work to move into/out of group
-hl.bind(main_mod .. " + SHIFT + h", hl.dsp.window.move { direction = "left" })
-hl.bind(main_mod .. " + SHIFT + j", hl.dsp.window.move { direction = "down" })
-hl.bind(main_mod .. " + SHIFT + k", hl.dsp.window.move { direction = "up" })
-hl.bind(main_mod .. " + SHIFT + l", hl.dsp.window.move { direction = "right" })
+hl.bind(main_mod .. " + SHIFT + h", hl.dsp.window.move { direction = "left", group_aware = true })
+hl.bind(main_mod .. " + SHIFT + j", hl.dsp.window.move { direction = "down", group_aware = true })
+hl.bind(main_mod .. " + SHIFT + k", hl.dsp.window.move { direction = "up", group_aware = true })
+hl.bind(main_mod .. " + SHIFT + l", hl.dsp.window.move { direction = "right", group_aware = true })
 
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0
