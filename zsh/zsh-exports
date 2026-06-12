@@ -19,3 +19,7 @@ export LUA_CPATH='/usr/local/lib/lua/5.1/?.so;/usr/lib/lua/5.1/?.so;/usr/local/l
 export PATH="$PATH:/home/luis/.luarocks/bin"
 
 export PATH="$PATH:/home/luis/.config/composer/vendor/bin"
+
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
