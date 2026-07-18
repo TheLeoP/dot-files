@@ -117,13 +117,12 @@ hl.gesture {
 
 local terminal = "wezterm"
 local file_manager = "nautilus"
-local menu = "hyprlauncher"
 
 local main_mod = "SUPER"
 
 hl.bind(main_mod .. " + delete", hl.dsp.exec_cmd(terminal))
 hl.bind(main_mod .. " + e", hl.dsp.exec_cmd(file_manager))
-hl.bind(main_mod .. " + d", hl.dsp.exec_cmd(menu))
+hl.bind(main_mod .. " + d", hl.dsp.exec_cmd "rofi -show drun -show-icons")
 
 hl.bind(main_mod .. " + q", hl.dsp.window.close())
 hl.bind(main_mod .. " + v", hl.dsp.window.float { action = "toggle" })
