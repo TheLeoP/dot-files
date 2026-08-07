@@ -181,7 +181,7 @@
       "car": "",
       "default": ["", "", ""],
     },
-    "on-click": "pavucontrol",
+    "on-click": "pwvucontrol",
   },
   "disk": {
     "format": "{specific_free:0.2f} / {specific_total:0.2f} GB",
