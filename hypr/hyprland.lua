@@ -5,6 +5,35 @@ hl.monitor {
   scale = 1,
 }
 
+local function is_hdmi_connected()
+  local is_connected = false
+  for _, monitor in ipairs(hl.get_monitors()) do
+    if monitor.name == "HDMI-A-1" then
+      is_connected = true
+      break
+    end
+  end
+  return is_connected
+end
+
+hl.on("monitor.added", function()
+  if is_hdmi_connected() then hl.monitor {
+    output = "eDP-1",
+    disabled = true,
+  } end
+end)
+hl.on("monitor.removed", function()
+  if not is_hdmi_connected() then
+    hl.monitor {
+      output = "eDP-1",
+      disabled = false,
+      mode = "preferred",
+      position = "auto",
+      scale = 1,
+    }
+  end
+end)
+
 hl.on("hyprland.start", function()
   hl.exec_cmd "nm-applet"
   hl.exec_cmd "waybar"
