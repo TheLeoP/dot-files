@@ -10,8 +10,7 @@
   "modules-right": [
     "mpd",
     "idle_inhibitor",
-    "network#ethernet",
-    "network#share",
+    "network",
     "battery",
     "battery#controller",
     "power-profiles-daemon",
@@ -149,19 +148,10 @@
       "power-saver": "",
     },
   },
-  "network#ethernet": {
-    "interface": "enp3s0",
+  "network": {
     "tooltip": false,
     "format-ethernet": "{ipaddr}/{cidr} 󰈁",
     "format-linked": "{ifname} (No IP) 󰈁",
-    "format-disconnected": "Disconnected ⚠",
-  },
-  "network#share": {
-    "interface": "wlp0s20f3",
-    "tooltip": false,
-    "format": "{ipaddr}/{cidr} ({signalStrength}%) SHARING",
-    "format-wifi": "{ipaddr}/{cidr} ({signalStrength}%) ",
-    "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
   },
   "pulseaudio": {
