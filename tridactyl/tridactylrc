@@ -52,7 +52,7 @@ bind gg scrollto 0
 bind <C-u> scrollpage -0.5
 bind <C-d> scrollpage 0.5
 unbind <C-f>
-bind <C-b> scrollpage -1
+unbind <C-b>
 bind <C-v> nmode ignore 1 mode normal
 bind $ scrollto 100 x
 bind ^ scrollto 0 x
