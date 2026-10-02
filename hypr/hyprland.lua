@@ -171,17 +171,21 @@ hl.bind(main_mod .. " + print", hl.dsp.exec_cmd "flameshot gui --accept-on-selec
 hl.bind(main_mod .. " + CONTROL + v", hl.dsp.global "desktop:205FD0D140220BD287CCD2FC7F748FA1-Ctrl+Command+V")
 hl.bind(main_mod .. " + CONTROL + c", hl.dsp.global "desktop:326356BAF1BF42375785D19B6752E320-Ctrl+Command+C")
 
-hl.define_submap("exit: [r]eboot, [l]ogout, [s]hutdown", function()
+hl.define_submap("exit: [r]eboot, [l]ogout, [s]hutdown, s[u]spend", function()
   hl.bind("r", hl.dsp.exec_cmd "systemctl reboot")
   hl.bind("s", hl.dsp.exec_cmd "systemctl poweroff")
   hl.bind(
     "l",
     hl.dsp.exec_cmd "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"
   )
+  hl.bind("u", function()
+    hl.dispatch(hl.dsp.submap "reset")
+    hl.dispatch(hl.dsp.exec_cmd "systemctl suspend")
+  end)
 
   hl.bind("escape", hl.dsp.submap "reset")
 end)
-hl.bind(main_mod .. " + x", hl.dsp.submap "exit: [r]eboot, [l]ogout, [s]hutdown")
+hl.bind(main_mod .. " + x", hl.dsp.submap "exit: [r]eboot, [l]ogout, [s]hutdown, s[u]spend")
 
 hl.window_rule {
   -- Ignore maximize requests from all apps. You'll probably like this.
