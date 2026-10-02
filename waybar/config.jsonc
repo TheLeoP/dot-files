@@ -9,7 +9,6 @@
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "mpd",
-    "idle_inhibitor",
     "network",
     "battery#controller",
     "power-profiles-daemon",
@@ -67,13 +66,6 @@
     },
     "tooltip-format": "MPD (connected)",
     "tooltip-format-disconnected": "MPD (disconnected)",
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": "",
-    },
   },
   "tray": {
     // "icon-size": 21,
