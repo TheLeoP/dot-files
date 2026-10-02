@@ -115,13 +115,12 @@ hl.gesture {
   action = "workspace",
 }
 
-local terminal = "wezterm"
-local file_manager = "nautilus"
-
 local main_mod = "SUPER"
 
-hl.bind(main_mod .. " + delete", hl.dsp.exec_cmd(terminal))
-hl.bind(main_mod .. " + e", hl.dsp.exec_cmd(file_manager))
+hl.bind(main_mod .. " + delete", hl.dsp.exec_cmd "wezterm")
+hl.bind(main_mod .. " + e", hl.dsp.exec_cmd "nautilus")
+hl.bind(main_mod .. " + z", hl.dsp.exec_cmd "zen-browser")
+hl.bind(main_mod .. " + t", hl.dsp.exec_cmd "steam")
 hl.bind(main_mod .. " + d", hl.dsp.exec_cmd "rofi -show drun -show-icons")
 
 hl.bind(main_mod .. " + q", hl.dsp.window.close())
