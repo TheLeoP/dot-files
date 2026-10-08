@@ -76,6 +76,29 @@ source <(fzf --zsh)
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-eval "$(direnv hook zsh)"
-
 zsh_add_file "zsh-wezterm"
+
+
+# TODO: this is done by `eval "$(direnv hook zsh)"`, with an extra check for
+# $ZSH_EVAL_CONTEXT. Said check breaks the function when opening new terminals
+# in a directory that does contain a .env file. This is a workaround until
+# a solution for https://github.com/direnv/direnv/issues/1633 is merged. After
+# that, I should simply add back the original command
+_direnv_hook() {
+  setopt localoptions localtraps extendedglob
+  if [[ ! -o interactive  || $ZSH_SUBSHELL -ne 0 ]]; then
+    return
+  fi
+  vars="$($'/usr/bin/direnv' export zsh)"
+  trap -- '' SIGINT
+  eval "$vars"
+  trap - SIGINT
+}
+typeset -ag precmd_functions
+if (( ! ${precmd_functions[(I)_direnv_hook]} )); then
+  precmd_functions=(_direnv_hook $precmd_functions)
+fi
+typeset -ag chpwd_functions
+if (( ! ${chpwd_functions[(I)_direnv_hook]} )); then
+  chpwd_functions=(_direnv_hook $chpwd_functions)
+fi
