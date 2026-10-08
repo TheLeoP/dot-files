@@ -9,7 +9,7 @@
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
-    "battery#controller",
+    "battery",
     "power-profiles-daemon",
     "cpu",
     "memory",
@@ -67,11 +67,15 @@
     "format": "{temperatureC}°C {icon}",
     "format-icons": ["󰉬", "", "󰉪"],
   },
-  "battery#controller": {
-    "bat": "ps-controller-battery-28:c1:3c:ba:e0:be",
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+  "battery": {
     "states": {
       "good": 80,
-      "warning": 30,
+      "warning": 20,
       "critical": 15,
     },
     "format": "{capacity}% {icon}",
@@ -79,7 +83,9 @@
     "format-charging": "{capacity}% 󰃨",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
-    "format-icons": ["󰝌", "󰝎", "󰝏", "󰝍"],
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""],
   },
   "power-profiles-daemon": {
     "format": "{icon}",
@@ -95,6 +101,7 @@
   "network": {
     "tooltip": false,
     "format-ethernet": "{ipaddr}/{cidr} 󰈁",
+    "format-wifi": "{ipaddr}/{cidr} ({signalStrength}%) ",
     "format-linked": "{ifname} (No IP) 󰈁",
     "format-disconnected": "Disconnected ⚠",
   },
