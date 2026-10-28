@@ -180,7 +180,12 @@ hl.define_submap("exit: [r]eboot, [l]ogout, [s]hutdown, s[u]spend", function()
   )
   hl.bind("u", function()
     hl.dispatch(hl.dsp.submap "reset")
-    hl.dispatch(hl.dsp.exec_cmd "systemctl suspend")
+    -- hyprland doesn't play nice with the computer being suspended in the
+    -- middle of a keybind execution, sometimes it leaves my PC in weird
+    -- states. As a workaround, I defer actually suspending for 1 second
+    hl.timer(function()
+      hl.dispatch(hl.dsp.exec_cmd "systemctl suspend")
+    end, { type = "oneshot", timeout = 1000 })
   end)
 
   hl.bind("escape", hl.dsp.submap "reset")
