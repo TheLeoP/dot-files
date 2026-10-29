@@ -47,6 +47,8 @@ hl.config {
 
     shadow = { enabled = false },
     blur = { enabled = false },
+    wobble = { enabled = false },
+    glow = { enabled = false },
   },
   animations = { enabled = false },
 }
