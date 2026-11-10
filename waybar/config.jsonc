@@ -56,7 +56,8 @@
     "tooltip": false,
   },
   "memory": {
-    "format": "{used} / {total} GB",
+    "format": "{used:0.2f} / {total:0.2f} GiB",
+    "unit": "GiB",
   },
   "temperature": {
     // "thermal-zone": 2,
