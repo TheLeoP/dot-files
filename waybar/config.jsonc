@@ -16,7 +16,6 @@
     "memory",
     "disk",
     "temperature",
-    "backlight",
     "pulseaudio",
     "clock",
     "tray",
@@ -93,11 +92,6 @@
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
     "format-icons": ["󰉬", "", "󰉪"],
-  },
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "battery#controller": {
     "bat": "ps-controller-battery-28:c1:3c:ba:e0:be",
