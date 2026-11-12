@@ -51,6 +51,9 @@ hl.config {
     glow = { enabled = false },
   },
   animations = { enabled = false },
+  render = {
+    cm_auto_hdr = false,
+  },
 }
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
